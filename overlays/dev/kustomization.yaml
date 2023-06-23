@@ -9,3 +9,7 @@ resources:
 patches:
 - path: deployment-patch.yaml
 - path: service-patch.yaml
+- target:
+    kind: Ingress
+    name: my-ingress
+  path: ingress-patch.yaml

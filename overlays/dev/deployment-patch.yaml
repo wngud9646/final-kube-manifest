@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: mission-link
   name: mission-link-deployment
   labels:
     app: mission-link
@@ -8,14 +9,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mission-link
+      app.kubernetes.io/name: mission-link
   template:
     metadata:
       labels:
-        app: mission-link
+        app.kubernetes.io/name: mission-link
     spec:
       containers:
-      - name: mission-link
-        image: 257840391579.dkr.ecr.ap-northeast-2.amazonaws.com/final:20230621084718
-        ports:
-        - containerPort: 3000
+        - image: 257840391579.dkr.ecr.ap-northeast-2.amazonaws.com/final:20230621084718
+          imagePullPolicy: Always
+          name: mission-link
+          ports:
+            - containerPort: 3000
