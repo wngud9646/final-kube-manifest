@@ -5,7 +5,7 @@ metadata:
   name: mission-link-service
 spec:
   selector:
-    app.kubernetes.io/name: mission-link
+    app: mission-link
   ports: 
     - protocol: TCP
       port: 80
