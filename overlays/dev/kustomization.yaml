@@ -11,5 +11,5 @@ patches:
 - path: service-patch.yaml
 - target:
     kind: Ingress
-    name: my-ingress
+    name: mission-link-ingress
   path: ingress-patch.yaml
