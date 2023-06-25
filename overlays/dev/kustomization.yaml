@@ -3,13 +3,13 @@ kind: Kustomization
 images:
 - name: 257840391579.dkr.ecr.ap-northeast-2.amazonaws.com/final
   newName: 257840391579.dkr.ecr.ap-northeast-2.amazonaws.com/final
-  newTag: "20230623041137"
+  newTag: "20230625095750"
 resources:
 - ../../base
 patches:
 - path: deployment-patch.yaml
 - path: service-patch.yaml
-- target:
+- path: ingress-patch.yaml
+  target:
     kind: Ingress
     name: mission-link-ingress
-  path: ingress-patch.yaml
