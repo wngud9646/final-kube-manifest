@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 257840391579.dkr.ecr.ap-northeast-2.amazonaws.com/final
   newName: 257840391579.dkr.ecr.ap-northeast-2.amazonaws.com/final
-  newTag: "20230626112821"
+  newTag: "20230626115030"
 resources:
 - ../../base
 patches:
